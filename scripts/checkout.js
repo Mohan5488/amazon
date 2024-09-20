@@ -1,4 +1,4 @@
-import { cart,deleteItem } from "../data/cart.js";
+import { cart,deleteItem} from "../data/cart.js";
 import { products } from "../data/products.js";
 
 let cartHtml;
@@ -10,7 +10,6 @@ cart.forEach(cartItem =>{
             quantity = cartItem.quantity
             console.log(product.id)
         }
-        
     })
     cartHtml += `
         <div class="js-cart-item js-cart-item-remove">
@@ -26,7 +25,7 @@ cart.forEach(cartItem =>{
                     <div class="price">$${(matchingItem.priceCents / 100).toFixed(2)}</div>
                     <div>
                         <span class="sp">Quantity: ${quantity}</span>
-                        <span class="sp blue">Update</span>
+                        <span class="sp blue js-update-link" data-product-id = "${matchingItem.id}">Update</span>
                         <span class="sp blue js-delete-link" data-product-id = "${matchingItem.id}">Delete</span>
                     </div>
                 </div>
@@ -69,4 +68,3 @@ document.querySelectorAll('.js-delete-link').forEach(link =>{
         document.querySelector('.js-cart-item-remove').remove();
     })
 })
-
