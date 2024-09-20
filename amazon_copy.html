@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>amazon</title>
     <style>
 
         .amazon-header {
@@ -259,7 +259,7 @@
             </div>
             <div class="cart">
                 <div class="cart-quantity">
-                    <img class="search-image cart-img" src="cart-icon.png" alt="">
+                    <a href="checkout.html"><img class="search-image cart-img" src="cart-icon.png" alt=""></a>
                     <div class="cart-number">
                         0
                     </div>
@@ -1092,28 +1092,14 @@
         </div>
     </main>
     <script>
-        const cartNumDiv = document.querySelector('.cart-number')
-        const cartVal = cartNumDiv.innerHTML;
-        let cartNum = Number(cartVal)
-        function btnClick(quantity){
-            const allButtons =  document.querySelectorAll('.add-to-cart-button');
-            allButtons.forEach(button =>{
-                button.addEventListener('click',()=>{
-                    cartNum += quantity
-                    document.querySelector('.cart-number').innerHTML = cartNum;
-                })
+        document.querySelectorAll('.add-to-cart-button')
+        .forEach(button =>{
+            button.addEventListener('click',()=>{
+                
             })
-        }
-        const allQuantities = document.querySelectorAll('.quantity')
-        allQuantities.forEach(quantity =>{
-            quantity.addEventListener('change',()=>{
-                let selectedQuantity = '';
-                selectedQuantity = quantity.value;
-                btnClick(Number(selectedQuantity))
-            })
-        })
+        });
 
-
+        const cart = [];
     </script>
 </body>
 </html>
