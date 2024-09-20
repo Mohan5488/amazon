@@ -184,7 +184,7 @@ body{
 }
 .product-name{
     height: 40px;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
 }
 .product-rating-container{
     display: flex;
